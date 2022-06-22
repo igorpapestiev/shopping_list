@@ -37,7 +37,7 @@
 
       button.addEventListener('click', () =>  {       
       var newItem = input.value;
-      input.innerHTML = '';
+      input.value = '';
 
       var listItem = document.createElement('li');
       var listText = document.createElement('span');
@@ -51,6 +51,8 @@
 
       deleteButton.addEventListener('click', () => {
         list.removeChild(listItem);
+
+      input.focus();  
       })
     
 
